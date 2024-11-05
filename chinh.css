@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+}
+
+.tìmkiếm {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.thanhđiềuhướng a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.thanhđiềuhướng a:hover {
+    text-decoration: underline;
+    color: palevioletred;
+}
+
+.nộidungchính {
+    background-image: url('https://png.pngtree.com/background/20230321/original/pngtree-tasty-pho-at-restaurant-picture-image_2153797.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.nộidungchính h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.thanh3miền {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 20px;
+}
+
+.nút {
+    padding: 50px 80px;
+    border: 6px solid #fff;
+    color: #e6e4e4;
+    font-size: 30px;
+    text-decoration: 30px;
+    text-align: center;
+    border-radius: 9%;
+}
+
+.nút:hover {
+    background-color: palevioletred;
+    color: white;
+}
