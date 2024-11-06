@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.giỏhàng {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    color: #FFD700; /* Màu vàng */
+    font-size: 2.5rem; /* Kích thước lớn hơn */
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -66,7 +74,7 @@ body {
     border: 6px solid #fff;
     color: #e6e4e4;
     font-size: 30px;
-    text-decoration: 30px;
+    text-decoration: none; /* Đã sửa thành none */
     text-align: center;
     border-radius: 9%;
 }
