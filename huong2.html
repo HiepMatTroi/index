@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bánh Khoái</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 90%;
+            /* Điều chỉnh chiều ngang to hơn */
+            height: 350px;
+            /* Điều chỉnh chiều cao nhỏ hơn */
+            object-fit: cover;
+            /* Đảm bảo ảnh không bị méo */
+            margin: 10px auto;
+            /* Căn giữa */
+            display: block;
+            border-radius: 10px;
+            /* Bo góc ảnh */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            /* Thêm hiệu ứng đổ bóng */
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #bbb;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .description {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .description h2 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #e63946;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 20px;
+        }
+
+        .rating {
+            margin-top: 10px;
+        }
+
+        .rating i {
+            color: #ffd700;
+            margin-left: 20px;
+        }
+
+        .rating span {
+            margin-left: 5px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .order-button {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px 25px;
+            background-color: #e63946;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            width: 200px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .order-button:hover {
+            background-color: #ff5050;
+            box-shadow: 0 0 10px rgba(230, 57, 70, 0.7);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img alt="Bánh Khoái" src="./images/KPH_banh-khoai-Hue.jpg">
+
+        </div>
+        <div class="description">
+            <h2>Bánh Khoái Huế</h2>
+            Một món đặc sản Huế thú vị mà bạn không thể bỏ qua là bánh khoái. Mặc dù bánh khoái có hình thức tương tự
+            như bánh xèo với lớp vỏ vàng giòn, nhưng phần nhân bên trong lại có sự khác biệt đặc biệt. Bánh khoái được
+            làm từ các thành phần như tôm, giò, cá kình và giá sống.
+            Khi thưởng thức bánh khoái, bạn có thể kết hợp với nước chấm đậm đà và rau sống tươi ngon. Khi nhấm nháp,
+            bạn sẽ cảm nhận được hương vị đặc trưng của bánh khoái. Lớp vỏ bánh giòn tan trong miệng, trong khi nhân bên
+            trong lại mềm và ẩm mịn. Sự kết hợp này tạo nên một trải nghiệm ẩm thực tuyệt vời, khiến bạn cảm thấy hài
+            lòng và thỏa mãn.
+        </div>
+        <div class="price">
+            GIÁ: 30.000 VNĐ/phần
+        </div>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>100+ đánh giá</span>
+        </div>
+        <a class="order-button" href="#">Đặt Hàng</a>
+    </div>
+    <footer>
+        Bánh Khoái
+    </footer>
+</body>
+
+</html>

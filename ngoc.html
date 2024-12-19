@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miền Bắc</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background-color: #000000; /* Màu nền đen */
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            background-color: #1a1a1a; /* Màu nền navbar tối */
+            padding: 10px 20px;
+            border-bottom: 2px solid #333333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff; /* Chữ trắng */
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a.active {
+            background-color: #444444; /* Màu nền khi chọn mục */
+            border-radius: 5px;
+        }
+        .navbar a:hover {
+            background-color: #555555; /* Màu nền khi hover */
+            color: #d4eaff; /* Màu chữ sáng hơn khi hover */
+        }
+
+        /* Content styling */
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff; /* Chữ trắng cho tiêu đề */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            color: #d4d4d4; /* Chữ sáng hơn cho nội dung */
+        }
+
+        /* Dishes styling */
+        .dishes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .dish {
+            border: 1px solid #444444; /* Border tối */
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #222222; /* Nền tối cho mỗi món ăn */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: calc(33.333% - 20px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .dish:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .dish img {
+            width: 100%;
+            height: 100%; /* Đảm bảo ảnh có chiều cao đầy đủ */
+            object-fit: cover; /* Điều chỉnh ảnh sao cho không bị biến dạng */
+            border-bottom: 1px solid #444444; /* Border tối cho ảnh */
+        }
+        .dish-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffffff; /* Chữ trắng */
+            text-align: center;
+            padding: 10px;
+            background-color: #333333; /* Nền tối cho tên món */
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .dish img {
+            width: 100%; /* Ảnh rộng đầy đủ khung */
+            height: 400px; /* Chiều cao cố định */
+            object-fit: cover; /* Cắt ảnh để vừa khung mà không bị méo */
+            border-bottom: 1px solid #444444;
+}
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .dish {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .dish {
+                width: 100%;
+            }
+            .navbar {
+                flex-wrap: wrap;
+            }
+            .navbar a {
+                padding: 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a class="active" href="ngoc.html">Miền Bắc</a>
+        <a href="huong.html">Miền Trung</a>
+        <a href="hiep.html">Miền Nam</a> 
+        <a href="#">Liên Hệ</a>
+    </div>
+    <div class="content">
+        <h1>Những món đặc sản miền Bắc trứ danh nhất định phải 
+            thưởng thức.</h1>
+        <p>
+            Những món đặc sản của miền Bắc nổi tiếng với hương vị đậm đà, mặn mà, cay, béo và ngọt hơn so với các vùng khác, thường sử dụng nước mắm loãng và mắm tôm để tăng thêm hương vị đặc trưng. Bữa ăn của người dân miền Bắc thường phổ biến các món rau và các loại thủy sản nước ngọt như cua, cá, hến, tôm,... Đặc sản của miền Bắc Việt Nam không chỉ đại diện cho tinh hoa ẩm thực dân tộc lâu đời mà còn mang trong mình sự đa dạng và phong phú của vùng đất này.
+        </p>
+        <div class="dishes">
+            <div class="dish">
+                <a href="ngoc2.html"><img src="./images/thit-trau-gac-bep-sapa-mon-an-dac-san-gay-thuong-nho-tu-vung-tay-bac-3-1621769167.jpg" alt="thịt trâu gác bếp"></a>
+                <div class="dish-name">thịt trâu gác bếp</div>
+            </div>
+            <div class="dish">
+                <a href="ngoc1.html">
+                    <img src="./images/pho-ngon-ha-noi-1.jpg" alt="phở hà nội">
+                </a>
+                <div class="dish-name">phở hà nội</div>
+            </div>
+            <!-- Món Bánh Xèo -->
+            <div class="dish">
+                <a href="ngoc3.html">
+                    <img src="./images/quan-bun-cha-ha-noi-o-tphcm-1239.jpg" alt="bún chả">
+                </a>
+                <div class="dish-name">bún chả</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

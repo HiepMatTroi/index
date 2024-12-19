@@ -1,36 +1,438 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ẩm Thực 3 Miền</title>
-    <link rel="stylesheet" href="chinh.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header class="navbar">
-        <i class="fas fa-shopping-cart giỏhàng"></i>
-        <div class="logo" style="color: yellow;">
-            <h1>HNH</h1>
-        </div>
-        <input type="text" placeholder="Tìm kiếm món ăn" class="tìmkiếm">
-        <nav class="thanhđiềuhướng">
-            <a href="#">Trang chủ</a>
-            <a href="#">Giới Thiệu</a>
-            <a href="#">Miền Bắc</a>
-            <a href="#">Miền Trung</a>
-            <a href="#">Miền Nam</a>
-            <a href="#">Liên Hệ</a>
-        </nav>
-    </header>
 
-    <section class="nộidungchính">
-        <h1>HÀNH TRÌNH VỊ GIÁC <br> VỚI <br> ẨM THỰC 3 <br> MIỀN</h1>
-        <div class="thanh3miền">
-            <a href="#" class="nút">Miền Bắc</a>
-            <a href="#" class="nút">Miền Trung</a>
-            <a href="#" class="nút">Miền Nam</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ẩm Thực 3 Miền</title>
+  <meta name="description"
+    content="Khám phá ẩm thực 3 miền của Việt Nam với các món ăn đặc trưng, phong phú và đa dạng từ miền Bắc, miền Trung và miền Nam.">
+  <meta name="keywords"
+    content="Ẩm thực 3 miền, món ăn Việt Nam, ẩm thực miền Bắc, ẩm thực miền Trung, ẩm thực miền Nam">
+  <link rel="stylesheet" href="chinh.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #000;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #333;
+    }
+
+    .giỏhàng {
+      color: #FFD700;
+      font-size: 2.5rem;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .giỏhàng:hover {
+      transform: scale(1.1);
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      color: yellow;
+    }
+
+    .tìmkiếm {
+      width: 300px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .tìmkiếm::placeholder {
+      color: #aaa;
+    }
+
+    .tìmkiếm:focus {
+      background-color: #444;
+    }
+
+    /* Navigation Links */
+    .thanhđiềuhướng a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    .thanhđiềuhướng a:hover {
+      text-decoration: underline;
+      color: rgb(67, 49, 55);
+    }
+
+    /* Các phần khác như .thanh3miền, .nút, animations, và responsive design đã được giữ nguyên */
+
+    .thanh3miền {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .nút {
+      padding: 20px 40px;
+      border: 4px solid #fff;
+      color: #e6e4e4;
+      font-size: 24px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 10%;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nút:hover {
+      background-color: rgb(67, 49, 55);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .giỏhàng {
+        font-size: 2rem;
+      }
+
+      .tìmkiếm {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .logo h1 {
+        font-size: 24px;
+      }
+
+      .thanh3miền {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nút {
+        padding: 15px 30px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo h1 {
+        font-size: 20px;
+      }
+
+      .thanhđiềuhướng a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+      .tìmkiếm {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .carousel-item img {
+        height: 300px;
+        /* Giảm chiều cao trên thiết bị nhỏ */
+      }
+
+      .main-content h2,
+      .main-content h3 {
+        font-size: 20px;
+      }
+
+      .main-content p {
+        font-size: 14px;
+      }
+    }
+
+    /* CSS cho hình ảnh trong carousel */
+    .carousel-item img {
+      height: 500px;
+      /* Điều chỉnh chiều cao theo nhu cầu */
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 50px 20px;
+      background-color: #111;
+    }
+
+    .main-content h2,
+    .main-content h3 {
+      color: #FFD700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .main-content p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .region-section {
+      margin-bottom: 50px;
+    }
+
+    .region-section img {
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    footer h5 {
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #FFD700;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+
+    .hihi {
+      text-align: center;
+      color: #FFD700;
+      padding: 20px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <i class="fas fa-shopping-cart giỏhàng"></i>
+    <div class="logo">
+      <h1>HNH</h1>
+    </div>
+    <input type="text" placeholder="Tìm kiếm món ăn" class="tìmkiếm">
+    <nav class="thanhđiềuhướng">
+      <a href="index.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới Thiệu</a>
+      <a href="ngoc.html">Miền Bắc</a>
+      <a href="huong.html">Miền Trung</a>
+      <a href="hiep.html">Miền Nam</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="hihi">
+      <h3>Hành Trình Vị Giác Với Ẩm Thực Ba Miền</h3>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/mienbac-e1648045572225.jpg" alt="Miền Bắc" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Miền Bắc</h3>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/san-pham-dac-trung-cua-mien-bac-va-mien-nam-1.jpg" alt="Miền Trung" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Miền Trung</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/image15.png" alt="Miền Nam" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Miền Nam</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content container">
+    <!-- Giới Thiệu -->
+    <section id="gioi-thieu" class="region-section">
+      <h2>Giới Thiệu Về Ẩm Thực 3 Miền</h2>
+      <p>
+        Ẩm thực 3 miền của Việt Nam mỗi miền đều có những đặc trưng riêng biệt, phản ánh văn hóa và lối sống của người
+        dân nơi đó. Hãy cùng chúng tôi khám phá những món ăn độc đáo và hấp dẫn từ Miền Bắc, Miền Trung và Miền Nam.
+      </p>
     </section>
+
+    <!-- Miền Bắc -->
+    <section id="mien-bac" class="region-section">
+      <h3>Miền Bắc</h3>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="./images/mienbac-e1648045572225.jpg" alt="Miền Bắc" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Ẩm thực miền Bắc nổi bật với các món ăn thanh đạm, ít dầu mỡ, hương vị tinh tế. Các món như phở, bún chả,
+            nem rán, bánh cuốn... không chỉ ngon mà còn mang đậm nét văn hóa truyền thống.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Miền Trung -->
+    <section id="mien-trung" class="region-section">
+      <h3>Miền Trung</h3>
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6">
+          <img src="./images/san-pham-dac-trung-cua-mien-bac-va-mien-nam-1.jpg" alt="Miền Trung" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Ẩm thực miền Trung nổi tiếng với các món ăn cay nồng, đậm đà như bún bò Huế, mì Quảng, cao lầu... Những món
+            ăn này không chỉ ngon mà còn phản ánh khí hậu và văn hóa độc đáo của vùng đất miền Trung.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Miền Nam -->
+    <section id="mien-nam" class="region-section">
+      <h3>Miền Nam</h3>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="./images/image15.png" alt="Miền Nam" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Ẩm thực miền Nam được biết đến với hương vị ngọt ngào, đa dạng và phong phú. Các món như cơm tấm, hủ tiếu,
+            bánh xèo, chè... đều là những món ăn đặc trưng không thể thiếu khi nhắc đến ẩm thực miền Nam.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Thông Tin Liên Hệ -->
+        <div class="col-md-4">
+          <h5>Liên Hệ</h5>
+          <p>Địa chỉ: Số 182,đường lê duận, thành phố vinh</p>
+          <p>Email: hotuanhiep543@gmail.com</p>
+          <p>Phone: +84 773 372 926</p>
+        </div>
+        <!-- Mạng Xã Hội -->
+        <div class="col-md-4">
+          <h5>Theo Dõi Chúng Tôi</h5>
+          <div class="social-icons">
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-2x"></i></a>
+          </div>
+        </div>
+        <!-- Chính Sách -->
+        <div class="col-md-4">
+          <h5>Chính Sách</h5>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Điều khoản sử dụng</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        &copy; 2024 Ẩm Thực 3 Miền. Hiệp Mặt Trời.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Carousel Initialization -->
+  <script>
+    const carousel = new bootstrap.Carousel('#carouselExampleAutoplaying', {
+      interval: 3000, // Thay đổi mỗi 3 giây
+      ride: 'carousel'
+    });
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background-color: #000000; /* Màu nền đen */
+        }
+        .navbar {
+            display: flex;
+            background-color: #1a1a1a; /* Màu nền navbar tối */
+            padding: 10px 20px;
+            border-bottom: 2px solid #333333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff; /* Chữ trắng */
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a.active {
+            background-color: #444444; /* Màu nền khi chọn mục */
+            border-radius: 5px;
+        }
+        .navbar a:hover {
+            background-color: #555555; /* Màu nền khi hover */
+            color: #d4eaff; /* Màu chữ sáng hơn khi hover */
+        }
+        
+        .gioithieu {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            color: red;
+        }
+        .gioithieu h4 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .gioithieu h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .thantrang {
+            font-size: 25px;
+            padding-left: 150px;
+            text-align: auto;
+            margin: 20px 0;
+        }
+        .khampha img {
+            width: 100%;
+            height: auto;
+            max-width: 1000px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .dactrung {
+            margin-top: 30px;
+            font-size: 20px;
+            padding: 0 20px;
+        }
+        .dactrung b {
+            color: red;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .thantrang {
+                font-size: 20px;
+                padding-left: 0;
+            }
+            .gioithieu h1 {
+                font-size: 28px;
+            }
+            .gioithieu h4 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Trang Chủ</a>
+        <a class="active" href="gioithieu.html">Giới Thiệu</a>
+        <a href="ngoc.html">Miền Bắc</a> 
+        <a href="huong.html">Miền Trung</a>
+        <a href="hiep.html">Miền Nam</a>
+        <a href="lienhe.html">Liên Hệ</a>
+    </div>
+
+    <div class="gioithieu">
+        <h4>GIỚI THIỆU</h4>
+        <h1><b>KHÁM PHÁ ẨM THỰC</b></h1>
+    </div>
+
+    <header class="thantrang">
+        <h2><b>Món ngon 3 miền - nét tinh hoa của ẩm thực Việt</b></h2>
+        <h3 style="color: red;">KHÁM PHÁ ẨM THỰC</h3>
+        <div class="khampha">
+            <p><b>Ẩm thực Việt Nam luôn có sức hút với những món ngon 3 miền làm say lòng không biết bao du khách cả
+            trong và ngoài nước.</b> 
+            <br>Không chỉ nổi tiếng với các danh lam thắng cảnh, sông nước hữu tình, Việt Nam trong mắt bạn bè quốc tế 
+            còn là một vùng đất và trong nền <b>văn hóa ẩm thực</b> với đa dạng các món đặc sản làm say lòng du khách.
+            <br>Chỉ khi các bạn thật sự đến từng nơi, thưởng thức nền <b>ẩm thực</b> tại đó bạn mới có thể thực sự cảm nhận sự
+            khác biệt đầy độc đáo của các <b>Món ngon 3 miền</b> trải nghiệm trên dài trên mảnh đất hình chữ S đã góp
+            phần tạo nên bản sắc riêng cho nền <b>văn hóa ẩm thực Việt Nam</b>. Bây giờ hãy để HNH cùng bạn du lịch và 
+            trải nghiệm <b>Món ngon 3 miền</b> Bắc - Trung - Nam nhé</p>
+            <img src="https://giadinh.mediacdn.vn/296230595582509056/2022/12/9/mam-com-gia-dinh-16705521683151137887925.jpg" alt="Mâm cơm ngày Tết">
+        </div>
+
+        <div class="dactrung">
+            <h2>Đặc trưng món ăn 3 miền BẮC - TRUNG - NAM</h2>
+            <p>Mỗi vùng đất, mỗi miền, mỗi thành phố đều mang cho mình những bản sắc văn hóa, bản sắc dân tộc và
+            những nét đặc trưng riêng, không lẫn vào đâu được. Nếu nhắc đến <b>ẩm thực miền Nam</b> là nhắc đến hương
+            vị đậm đà thì <b>ẩm thực miền Bắc</b> là cả 1 bầu trời mùi vị của sự tinh tế và thanh tao được gói gọn trong
+            từng giác quan. Còn <b>ẩm thực miền Trung</b> lại làm thực khách thêm phần say đắm với chút cay nồng nàn,
+            một chút ấm nóng mang mùi hương của nắng và gió.<br> Món ngon 3 miền sẽ cho bạn những bức tranh ẩm thực đầy độc đáo và đặc trưng của mỗi vùng đất riêng biệt trên mảnh đất hình chữ S.</p>
+        </div>
+
+    </header>
+</body>
+</html>
