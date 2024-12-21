@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +13,39 @@
             margin: 0;
             padding: 0;
             color: #ffffff;
-            background-color: #000000; /* Màu nền đen */
+            background-color: #111111;
+            /* Nền tối hơn để dễ đọc */
+            line-height: 1.6;
         }
 
         /* Navbar styling */
         .navbar {
             display: flex;
-            background-color: #1a1a1a; /* Màu nền navbar tối */
-            padding: 10px 20px;
+            background-color: #1a1a1a;
+            padding: 12px 20px;
             border-bottom: 2px solid #333333;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         .navbar a {
             text-decoration: none;
-            color: #ffffff; /* Chữ trắng */
-            padding: 10px 20px;
+            color: #ffffff;
+            padding: 12px 20px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .navbar a.active {
-            background-color: #444444; /* Màu nền khi chọn mục */
+            background-color: #444444;
             border-radius: 5px;
         }
+
         .navbar a:hover {
-            background-color: #555555; /* Màu nền khi hover */
-            color: #d4eaff; /* Màu chữ sáng hơn khi hover */
+            background-color: #555555;
+            color: #d4eaff;
         }
 
         /* Content styling */
@@ -48,18 +54,20 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .content h1 {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
-            color: #ffffff; /* Chữ trắng cho tiêu đề */
+            color: #ffffff;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .content p {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.8;
             text-align: justify;
-            color: #d4d4d4; /* Chữ sáng hơn cho nội dung */
+            color: #d4d4d4;
         }
 
         /* Dishes styling */
@@ -70,43 +78,44 @@
             margin-top: 30px;
             justify-content: center;
         }
+
         .dish {
-            border: 1px solid #444444; /* Border tối */
+            border: 1px solid #444444;
             border-radius: 8px;
             overflow: hidden;
-            background-color: #222222; /* Nền tối cho mỗi món ăn */
+            background-color: #222222;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: calc(33.333% - 20px);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
         }
+
         .dish:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
+
         .dish img {
             width: 100%;
-            height: 100%; /* Đảm bảo ảnh có chiều cao đầy đủ */
-            object-fit: cover; /* Điều chỉnh ảnh sao cho không bị biến dạng */
-            border-bottom: 1px solid #444444; /* Border tối cho ảnh */
+            height: 300px;
+            /* Giảm chiều cao ảnh để cân đối hơn */
+            object-fit: cover;
+            border-bottom: 1px solid #444444;
         }
+
         .dish-name {
             font-weight: bold;
             font-size: 18px;
-            color: #ffffff; /* Chữ trắng */
+            color: #ffffff;
             text-align: center;
-            padding: 10px;
-            background-color: #333333; /* Nền tối cho tên món */
+            padding: 12px;
+            background-color: #333333;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
-        .dish img {
-            width: 100%; /* Ảnh rộng đầy đủ khung */
-            height: 400px; /* Chiều cao cố định */
-            object-fit: cover; /* Cắt ảnh để vừa khung mà không bị méo */
-            border-bottom: 1px solid #444444;
-}
+
+    
 
         /* Responsive design */
         @media (max-width: 768px) {
@@ -114,52 +123,58 @@
                 width: calc(50% - 20px);
             }
         }
+
         @media (max-width: 480px) {
             .dish {
                 width: 100%;
             }
+
             .navbar {
                 flex-wrap: wrap;
             }
+
             .navbar a {
-                padding: 10px;
-                font-size: 12px;
+                padding: 12px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="navbar">
         <a href="index.html">Trang chủ</a>
         <a href="gioithieu.html">Giới Thiệu</a>
-        <a href="ngoc.html">Miền Bắc</a> 
+        <a href="ngoc.html">Miền Bắc</a>
         <a href="huong.html">Miền Trung</a>
         <a class="active" href="hiep.html">Miền Nam</a>
-        <a href="#">Liên Hệ</a>
+        <a href="lienhe.html">Liên Hệ</a>
     </div>
-    
+
     <div class="content">
-        <h1>Những món ăn bạn nhất định phải thử khi đến Miền nam.</h1>
+        <h1>Những món ăn bạn nhất định phải thử khi đến Miền Nam</h1>
         <p>
-            Ẩm thực miền Nam Việt Nam là sự kết hợp tinh tế giữa những nguyên liệu tươi ngon từ vùng đồng bằng sông Cửu Long và phong cách nấu nướng giản dị nhưng đậm đà. Đặc trưng nổi bật của ẩm thực nơi đây
-là hương vị ngọt ngào, béo ngậy nhưng không kém phần đậm đà nhờ vào việc sử dụng nước dừa, đường 
-thốt nốt, và các loại gia vị tự nhiên. Người dân miền Nam thường thích ăn các món có vị ngọt và cay nhẹ, tạo nên sự hài hòa và hấp dẫn trong từng món ăn.
+            Ẩm thực miền Nam Việt Nam là sự kết hợp tinh tế giữa những nguyên liệu tươi ngon từ vùng đồng bằng sông Cửu
+            Long và phong cách nấu nướng giản dị nhưng đậm đà. Đặc trưng nổi bật của ẩm thực nơi đây là hương vị ngọt
+            ngào, béo ngậy nhưng không kém phần đậm đà nhờ vào việc sử dụng nước dừa, đường thốt nốt, và các loại gia vị
+            tự nhiên. Người dân miền Nam thường thích ăn các món có vị ngọt và cay nhẹ, tạo nên sự hài hòa và hấp dẫn
+            trong từng món ăn.
         </p>
         <div class="dishes">
             <div class="dish">
-                <a href="hiep2.html"><img src="./images/comtam.jpg" alt="cơm tấm"></a>
+                <a href="hiep2.html"><img src="./images/comtam.jpg" alt="Cơm Tấm"></a>
                 <div class="dish-name">Cơm Tấm</div>
             </div>
             <div class="dish">
-                <a href="hiep3.html"><img src="./images/caloc.jpg" alt="cá lóc nướng trui"></a>
+                <a href="hiep3.html"><img src="./images/caloc.jpg" alt="Cá Lóc Nướng Trui"></a>
                 <div class="dish-name">Cá Lóc Nướng Trui</div>
             </div>
-            <!-- Món Bánh Xèo -->
             <div class="dish">
-               <a href="hiep1.html"> <img src="./images/banhxeo.jpg" alt="bánh xèo"></a>
+                <a href="hiep1.html"><img src="./images/banhxeo.jpg" alt="Bánh Xèo"></a>
                 <div class="dish-name">Bánh Xèo</div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
