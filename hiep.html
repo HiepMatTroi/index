@@ -115,27 +115,73 @@
             border-bottom-right-radius: 8px;
         }
 
-    
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex; /* Dùng Flexbox để dàn ngang các phần tử */
+            justify-content: space-between; /* Các phần tử sẽ được phân chia đều */
+            gap: 60px; /* Khoảng cách giữa các phần tử */
+            margin-bottom: 20px;
+
+          
+        }
+
+        .footer-section {
+            flex: 1; /* Mỗi phần tử chiếm đều không gian */
+            max-width: 300px; /* Giới hạn độ rộng tối đa */
+            text-align: center; /* Căn chỉnh văn bản sang trái */
+        }
+
+        footer h5 {
+            color: #FFD700; /* Màu vàng cho tiêu đề */
+            margin-bottom: 20px;
+        }
+        footer p{
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #FFD700;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #FFD700;
+        }
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .dish {
-                width: calc(50% - 20px);
+            .footer-container {
+                flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
+                justify-content: center; /* Căn giữa các phần tử */
+            }
+            .footer-section {
+                max-width: none;
+                margin-bottom: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .dish {
-                width: 100%;
-            }
-
-            .navbar {
-                flex-wrap: wrap;
-            }
-
-            .navbar a {
-                padding: 12px;
-                font-size: 14px;
+            .footer-container {
+                flex-direction: column; /* Chuyển các phần tử thành dọc khi màn hình quá nhỏ */
+                text-align: center; /* Căn giữa tất cả các phần tử */
             }
         }
     </style>
@@ -175,6 +221,38 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Thông Tin Liên Hệ -->
+            <div class="footer-section">
+                <h5>Liên Hệ</h5>
+                <p>Địa chỉ: Số 182,đường lê duận, thành phố vinh</p>
+                <p>Email: hotuanhiep543@gmail.com</p>
+                <p>Phone: +84 773 372 926</p>
+            </div>
+            <!-- Mạng Xã Hội -->
+            <div class="footer-section">
+                <h5>Theo Dõi Chúng Tôi</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+            <!-- Chính Sách -->
+            <div class="footer-section">
+                <h5>Chính Sách</h5>
+                <a href="#">Chính sách bảo mật</a><br>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            &copy; 2024 Ẩm Thực 3 Miền. Hiệp Mặt Trời.
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     content="Khám phá ẩm thực 3 miền của Việt Nam với các món ăn đặc trưng, phong phú và đa dạng từ miền Bắc, miền Trung và miền Nam.">
   <meta name="keywords"
     content="Ẩm thực 3 miền, món ăn Việt Nam, ẩm thực miền Bắc, ẩm thực miền Trung, ẩm thực miền Nam">
-  <link rel="stylesheet" href="chinh.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -42,7 +42,7 @@
       border-bottom: 2px solid #333;
     }
 
-    .giỏhàng {
+    .cart {
       color: #FFD700;
       font-size: 2.5rem;
       margin-right: 20px;
@@ -50,7 +50,7 @@
       transition: transform 0.2s ease;
     }
 
-    .giỏhàng:hover {
+    .cart:hover {
       transform: scale(1.1);
     }
 
@@ -59,7 +59,7 @@
       color: yellow;
     }
 
-    .tìmkiếm {
+    .search {
       width: 300px;
       padding: 10px 15px;
       border-radius: 20px;
@@ -71,16 +71,15 @@
       transition: background-color 0.3s ease;
     }
 
-    .tìmkiếm::placeholder {
+    .search::placeholder {
       color: #aaa;
     }
 
-    .tìmkiếm:focus {
+    .search:focus {
       background-color: #444;
     }
 
-    /* Navigation Links */
-    .thanhđiềuhướng a {
+    .navbar a {
       color: #fff;
       text-decoration: none;
       font-size: 16px;
@@ -89,14 +88,12 @@
       transition: color 0.3s ease, text-decoration 0.3s ease;
     }
 
-    .thanhđiềuhướng a:hover {
+    .navbar a:hover {
       text-decoration: underline;
       color: rgb(67, 49, 55);
     }
 
-    /* Các phần khác như .thanh3miền, .nút, animations, và responsive design đã được giữ nguyên */
-
-    .thanh3miền {
+    .region-bar {
       display: flex;
       justify-content: center;
       gap: 100px;
@@ -104,7 +101,7 @@
       margin-top: 20px;
     }
 
-    .nút {
+    .button {
       padding: 20px 40px;
       border: 4px solid #fff;
       color: #e6e4e4;
@@ -115,7 +112,7 @@
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     }
 
-    .nút:hover {
+    .button:hover {
       background-color: rgb(67, 49, 55);
       color: white;
       transform: scale(1.05);
@@ -131,62 +128,6 @@
       100% {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .giỏhàng {
-        font-size: 2rem;
-      }
-
-      .tìmkiếm {
-        width: 100%;
-        margin: 10px 0;
-      }
-
-      .logo h1 {
-        font-size: 24px;
-      }
-
-      .thanh3miền {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .nút {
-        padding: 15px 30px;
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo h1 {
-        font-size: 20px;
-      }
-
-      .thanhđiềuhướng a {
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-      .tìmkiếm {
-        width: 100%;
-        margin: 10px 0;
-      }
-
-      .carousel-item img {
-        height: 300px;
-        /* Giảm chiều cao trên thiết bị nhỏ */
-      }
-
-      .main-content h2,
-      .main-content h3 {
-        font-size: 20px;
-      }
-
-      .main-content p {
-        font-size: 14px;
       }
     }
 
@@ -261,51 +202,184 @@
       color: #FFD700;
       padding: 20px 20px;
     }
-    .container {
-            text-align: center;
-            padding: 20px;
-        }
-        .title {
-            font-size: 24px;
-            color: #ffcc00;
-            margin-bottom: 20px;
-        }
-        .food-section {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .food-item {
-            background-color: #000;
-            border: 1px solid #fff;
-            padding: 10px;
-            width: 30%;
-        }
-        .food-item img {
-            width: 100%;
-            height: auto;
-        }
-        .food-item .name {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .food-item .count {
-            font-size: 14px;
-            color: #ccc;
-        }
+
+    .container0 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .food-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .food-item {
+      background-color: #000;
+      border: 1px solid #fff;
+      padding: 10px;
+      width: 30%;
+    }
+
+    .food-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .food-item img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3);
+
+    }
+
+    .food-item:hover .name {
+      color: #FFD700;
+      /* Thay đổi màu sắc của tên món ăn khi hover */
+      transform: translateY(-5px);
+      /* Di chuyển tên món ăn lên trên một chút */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .food-item .name {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .food-item .count {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .food-item:hover .count {
+      color: #ccc;
+      /* Thay đổi màu sắc của số món ăn khi hover */
+      transform: translateY(5px);
+      /* Di chuyển số món ăn xuống dưới một chút */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .container1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .text-section1 {
+      width: 45%;
+    }
+
+    .text-section1 h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    .text-section1 p {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .image-section1 {
+      width: 45%;
+      border-radius: 10px;
+    }
+
+    .image-section1 img {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid black;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .giỏhàng {
+        font-size: 2rem;
+      }
+
+      .tìmkiếm {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .logo h1 {
+        font-size: 24px;
+      }
+
+      .thanh3miền {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nút {
+        padding: 15px 30px;
+        font-size: 20px;
+      }
+
+      .food-section {
+        flex-wrap: wrap;
+      }
+
+      .food-item {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo h1 {
+        font-size: 20px;
+      }
+
+      .thanhđiềuhướng a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+      .tìmkiếm {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .carousel-item img {
+        height: 300px;
+      }
+
+      .main-content h2,
+      .main-content h3 {
+        font-size: 20px;
+      }
+
+      .main-content p {
+        font-size: 14px;
+      }
+
+      .text-section1,
+      .image-section1 {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Header/Navbar -->
   <header class="navbar">
-    <i class="fas fa-shopping-cart giỏhàng"></i>
+    <i class="fas fa-shopping-cart cart"></i>
     <div class="logo">
       <h1>HNH</h1>
     </div>
-    <input type="text" placeholder="Tìm kiếm món ăn" class="tìmkiếm">
-    <nav class="thanhđiềuhướng">
-      <a href="index.html">Trang chủ</a>
+    <input type="text" placeholder="Search for food" class="search">
+    <nav class="navbar">
+      <a href="index.html">Trang Chủ</a>
       <a href="gioithieu.html">Giới Thiệu</a>
       <a href="ngoc.html">Miền Bắc</a>
       <a href="huong.html">Miền Trung</a>
@@ -363,40 +437,46 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div class="container">
+  <div class="container0">
     <div class="title">
-     Món Ăn Ưa Thích Của Ẩm Thực Ba Miền
+      Món Ăn Ưa Thích Của Ẩm Thực Ba Miền
     </div>
     <div class="food-section">
-     <div class="food-item">
-      <img alt="A variety of dishes from Miền Bắc region" height="200" src="https://storage.googleapis.com/a1aa/image/58G8gIUK90KuPZ1fNMFNDdYMHbVL0d0BY0tj4cdpg10R9ZeTA.jpg" width="300"/>
-      <div class="name">
-       Miền Bắc
+      <div class="food-item">
+        <img alt="A variety of dishes from Miền Bắc region" height="200"
+          src="https://storage.googleapis.com/a1aa/image/58G8gIUK90KuPZ1fNMFNDdYMHbVL0d0BY0tj4cdpg10R9ZeTA.jpg"
+          width="300" />
+        <div class="name">
+          Miền Bắc
+        </div>
+        <div class="count">
+          3 Món
+        </div>
       </div>
-      <div class="count">
-       3 Món
+      <div class="food-item">
+        <img alt="A bowl of noodles from Miền Trung region" height="200"
+          src="https://storage.googleapis.com/a1aa/image/58G8gIUK90KuPZ1fNMFNDdYMHbVL0d0BY0tj4cdpg10R9ZeTA.jpg"
+          width="300" />
+        <div class="name">
+          Miền Trung
+        </div>
+        <div class="count">
+          3 Món
+        </div>
       </div>
-     </div>
-     <div class="food-item">
-      <img alt="A bowl of noodles from Miền Trung region" height="200" src="https://storage.googleapis.com/a1aa/image/Tj4zt7W3E3oZKZb3XYWSZIeTvI1Bj8cCKaoApjwBMe7h6z8TA.jpg" width="300"/>
-      <div class="name">
-       Miền Trung
+      <div class="food-item">
+        <img alt="A plate of rice and grilled meat from Miền Nam region" height="200"
+          src="https://storage.googleapis.com/a1aa/image/GnpMoYfTeLsVXUy9Df6yfVHeD46X0pg1fr2ewf6Qq028k6z8TA.jpg"
+          width="300" />
+        <div class="name">
+          Miền Nam
+        </div>
+        <div class="count">
+          3 Món
+        </div>
       </div>
-      <div class="count">
-       3 Món
-      </div>
-     </div>
-     <div class="food-item">
-      <img alt="A plate of rice and grilled meat from Miền Nam region" height="200" src="https://storage.googleapis.com/a1aa/image/GnpMoYfTeLsVXUy9Df6yfVHeD46X0pg1fr2ewf6Qq028k6z8TA.jpg" width="300"/>
-      <div class="name">
-       Miền Nam
-      </div>
-      <div class="count">
-       3 Món
-      </div>
-     </div>
     </div>
-   </div>
+  </div>
 
   <!-- Main Content -->
   <main class="main-content container">
@@ -457,6 +537,27 @@
       </div>
     </section>
   </main>
+  <div class="container1">
+    <div class="text-section1">
+      <h1>
+        Hãy đồng hành cùng HNH
+      </h1>
+      <p>
+        Sự hài lòng của khách hàng
+      </p>
+      <p>
+        Đặt món ăn nhanh chóng
+      </p>
+      <p>
+        Nhiều ưu đãi hấp dẫn
+      </p>
+    </div>
+    <div class="image-section1">
+      <img alt="People enjoying food and giving thumbs up" height="400"
+        src="https://storage.googleapis.com/a1aa/image/oi9WzKeKysVAKiZ9k3WNQlpHrbRALpD3IqC0dS9YqSnobieTA.jpg"
+        width="600" />
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
