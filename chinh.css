@@ -174,7 +174,10 @@ footer a:hover {
   text-align: center;
   padding: 20px;
 }
-
+.container1 img{
+  width: 300px;
+  height: 300px;
+}
 .title {
   font-size: 24px;
   color: #ffcc00;
@@ -195,17 +198,20 @@ footer a:hover {
   background-color: #000;
   border: 1px solid #fff;
   padding: 15px;
-  width: calc(33.3333% - 20px);
-  ;
+  gap: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .food-item img {
-  width: 100%; /* Chiều rộng đầy đủ của phần tử cha */
-  height: 300px; /* Chiều cao cố định cho các ảnh */
-  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng và lấp đầy khung */
-  border-radius: 10px; /* Đảm bảo ảnh có các góc bo tròn */
+  width: 100%;
+  /* Chiều rộng đầy đủ của phần tử cha */
+  height: 300px;
+  /* Chiều cao cố định cho các ảnh */
+  object-fit: cover;
+  /* Đảm bảo hình ảnh không bị biến dạng và lấp đầy khung */
+  border-radius: 10px;
+  /* Đảm bảo ảnh có các góc bo tròn */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -278,3 +284,27 @@ footer a:hover {
 
 
 /* Responsive Design */
+@media (max-width: 1199.98px) {
+  .food-item{
+
+  }
+  .dish-mg{
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .food-item{
+    margin-bottom: 15px;
+  }
+  .dish-mg{
+    margin: 15px 0 15px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .food-item{
+    margin-bottom: 15px;
+  }
+}

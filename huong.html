@@ -46,6 +46,7 @@
 
 
 
+
         .navbar-nav {
             display: flex;
             gap: 30px;
@@ -101,11 +102,8 @@
 
         /* Dishes styling */
         .dishes {
-            display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             margin-top: 30px;
-            justify-content: center;
         }
 
         .dish {
@@ -114,10 +112,7 @@
             overflow: hidden;
             background-color: #222222;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: calc(33.333% - 20px);
             transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
         }
 
         .dish:hover {
@@ -268,64 +263,95 @@
             mạc, dân dã nhưng rất giàu dinh dưỡng, phản ánh cuộc sống giản dị mà đậm chất miền biển.
         </p>
         <div class="dishes">
-            <div class="dish">
-                <a href="huong3.html"><img src="./images/comamphu.jpg" alt="Cơm Âm Phụ"></a>
-                <div class="dish-name">Cơm Âm Phụ</div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="dish">
+                        <a href="huong3.html"><img
+                                src="./images/comamphu.jpg"
+                                alt="Cơm Âm Phụ"></a>
+                        <div class="dish-name">Cơm Âm Phụ</div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="dish">
+                        <a href="huong2.html">
+                            <img src="./images/KPH_banh-khoai-Hue.jpg" alt="Bánh Khoái">
+                        </a>
+                        <div class="dish-name">Bánh Khoái</div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 dish-mg">
+                    <div class="dish">
+                        <a href="huong1.html">
+                            <img src="./images/va-tron-hue-1-1512.jpg" alt="Vả Trộn">
+                        </a>
+                        <div class="dish-name">Vả Trộn</div>
+                    </div>
+                </div>
+
             </div>
-            <div class="dish">
-                <a href="huong2.html"><img src="./images/KPH_banh-khoai-Hue.jpg" alt="Bánh Khoái"></a>
-                <div class="dish-name">Bánh Khoái</div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="dish">
+                        <a href="#"><img src="./images/supluon.jpg" alt="Súp Lươn"></a>
+                        <div class="dish-name">Súp Lươn</div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="dish">
+                        <a href="#">
+                            <img src="./images/cudo.jpg" alt="Cu Đơ">
+                        </a>
+                        <div class="dish-name">Cu Đơ</div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 dish-mg">
+                    <div class="dish">
+                        <a href="#">
+                            <img src="./images/my_quang.jpg" alt="Mỳ Quảng">
+                        </a>
+                        <div class="dish-name">Mỳ Quảng</div>
+                    </div>
+                </div>
             </div>
-            <div class="dish">
-                <a href="huong1.html"><img src="./images/va-tron-hue-1-1512.jpg" alt="Vả Trộn"></a>
-                <div class="dish-name">Vả Trộn</div>
-            </div>
-            <div class="dish">
-                <a href="hiep2.html"><img src="./images/supluon.jpg" alt="Súp Lươn"></a>
-                <div class="dish-name">Súp Lươn</div>
-            </div>
-            <div class="dish">
-                <a href="hiep3.html"><img src="./images/cudo.jpg" alt="Cu Đơ"></a>
-                <div class="dish-name">Cu Đơ</div>
-            </div>
-            <div class="dish">
-                <a href="hiep1.html"><img src="./images/my_quang.jpg" alt="Mỳ Quảng"></a>
-                <div class="dish-name">Mỳ Quảng</div>
-            </div>
-        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <!-- Thông Tin Liên Hệ -->
-            <div class="footer-section">
-                <h5>Liên Hệ</h5>
-                <p>Địa chỉ: Số 182,đường lê duận, thành phố vinh</p>
-                <p>Email: hotuanhiep543@gmail.com</p>
-                <p>Phone: +84 773 372 926</p>
-            </div>
-            <!-- Mạng Xã Hội -->
-            <div class="footer-section">
-                <h5>Theo Dõi Chúng Tôi</h5>
-                <div class="social-icons">
-                    <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-2x"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-2x"></i></a>
+        <div class="container">
+            <div class="row">
+                <!-- Thông Tin Liên Hệ -->
+                <div class="col-md-4">
+                    <h5>Liên Hệ</h5>
+                    <p>Địa chỉ: Số 182,đường lê duận, thành phố vinh</p>
+                    <p>Email: hotuanhiep543@gmail.com</p>
+                    <p>Phone: +84 773 372 926</p>
+                </div>
+                <!-- Mạng Xã Hội -->
+                <div class="col-md-4">
+                    <h5>Theo Dõi Chúng Tôi</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <!-- Chính Sách -->
+                <div class="col-md-4">
+                    <h5>Chính Sách</h5>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
                 </div>
             </div>
-            <!-- Chính Sách -->
-            <div class="footer-section">
-                <h5>Chính Sách</h5>
-                <a href="#">Chính sách bảo mật</a><br>
-                <a href="#">Điều khoản sử dụng</a>
+            <div class="text-center mt-4">
+                &copy; 2024 Ẩm Thực 3 Miền. Hiệp Mặt Trời.
             </div>
         </div>
-        <div class="text-center mt-4">
-            &copy; 2024 Ẩm Thực 3 Miền. Hiệp Mặt Trời.
-        </div>
     </footer>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
